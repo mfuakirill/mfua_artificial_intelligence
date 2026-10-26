@@ -20,11 +20,22 @@ nums = [num0, num1, num2, num3, num4, num5, num6, num7, num8, num9]
 def rand_matrix(rows, cols):
     return [[random.uniform(-0.5, 0.5) for _ in range(cols)] for _ in range(rows)]
 
+# Искажение цифры: инвертирование NUM_DISTORTIONS случайных пикселей
+def distort(image, n):
+    img = list(image)
+    for idx in random.sample(range(INPUT_SIZE), n):
+        img[idx] = 1 - img[idx]
+    return img
+
 INPUT_SIZE = 15
 HIDDEN_SIZE = 10
 OUTPUT_SIZE = 10
 LEARNING_RATE = 0.005
 EPOCHS = 2000
+NUM_DISTORTIONS = 3   # Количество искажённых пикселей у каждой цифры (0-15)
+
+# Тестовая выборка: искажённые версии цифр (обучение остаётся на идеальных)
+test_nums = [distort(d, NUM_DISTORTIONS) for d in nums]
 
 # ---------- Параметры сети для дельта-правила ----------
 W1 = rand_matrix(HIDDEN_SIZE, INPUT_SIZE)   # Веса скрытого слоя
@@ -134,10 +145,10 @@ print("Цифра | Дельта-правило | Правило Хебба")
 print("------+----------------+--------------")
 for label in range(10):
     # Предсказание дельта-сети
-    _, _, output = forward(nums[label])
+    _, _, output = forward(test_nums[label])
     pred_delta = output.index(max(output))
     # Предсказание сети Хебба
-    pred_hebb = predict_hebb(nums[label])
+    pred_hebb = predict_hebb(test_nums[label])
 
     mark_delta = "✓" if pred_delta == label else "✗"
     mark_hebb = "✓" if pred_hebb == label else "✗"
