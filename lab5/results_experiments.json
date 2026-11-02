@@ -1,0 +1,48 @@
+{
+  "dropout": [
+    {
+      "tag": "Dropout rate = 0.0",
+      "train_acc": 0.7024999856948853,
+      "test_acc": 0.5873000025749207,
+      "params": 545098
+    },
+    {
+      "tag": "Dropout rate = 0.3",
+      "train_acc": 0.6877999901771545,
+      "test_acc": 0.5861999988555908,
+      "params": 545098
+    },
+    {
+      "tag": "Dropout rate = 0.5",
+      "train_acc": 0.6532999873161316,
+      "test_acc": 0.5723000168800354,
+      "params": 545098
+    },
+    {
+      "tag": "Dropout rate = 0.7",
+      "train_acc": 0.6126000285148621,
+      "test_acc": 0.5534999966621399,
+      "params": 545098
+    }
+  ],
+  "kernel": [
+    {
+      "tag": "Kernel 3x3",
+      "train_acc": 0.6671000123023987,
+      "test_acc": 0.570900022983551,
+      "params": 545098
+    },
+    {
+      "tag": "Kernel 5x5",
+      "train_acc": 0.6704000234603882,
+      "test_acc": 0.5687999725341797,
+      "params": 579402
+    },
+    {
+      "tag": "Kernel 7x7",
+      "train_acc": 0.7035999894142151,
+      "test_acc": 0.5618000030517578,
+      "params": 630858
+    }
+  ]
+}
