@@ -1,0 +1,208 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1793005579.454098 1054616 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/home/opencode/.pyenv/versions/3.13.17/lib/python3.13/site-packages/keras/src/layers/core/dense.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+Размер обучающих данных: (404, 13)
+Размер тестовых данных:  (102, 13)
+Размер обучающих меток:  (404,)
+Размер тестовых меток:   (102,)
+Первые 5 цен в обучающем наборе: [15.2 42.3 50.  21.1 17.7]
+Диапазон цен в обучающем наборе: 5.0-50.0
+Средние значения первых 5 признаков в обучающем наборе (до нормализации):
+[ 3.74511057 11.48019802 11.10443069  0.06188119  0.55735594]
+Стандартные отклонения первых 5 признаков в обучающем наборе (до нормализации):
+[ 9.22929073 23.73827702  6.80287253  0.24093963  0.11714785]
+Средние значения первых 5 признаков после нормализации (должны быть близки к 0):
+[-1.01541438e-16  1.09923072e-17  1.74337992e-15 -1.26686340e-16
+ -5.25377321e-15]
+Стандартные отклонения первых 5 признаков после нормализации (должны быть близки к 1):
+[1. 1. 1. 1. 1.]
+Model: "sequential"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃ Layer (type)                    ┃ Output Shape           ┃       Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ dense (Dense)                   │ (None, 64)             │           896 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense_1 (Dense)                 │ (None, 64)             │         4,160 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense_2 (Dense)                 │ (None, 1)              │            65 │
+└─────────────────────────────────┴────────────────────────┴───────────────┘
+ Total params: 5,121 (20.00 KB)
+ Trainable params: 5,121 (20.00 KB)
+ Non-trainable params: 0 (0.00 B)
+Epoch 1/100
+Epoch 2/100
+Epoch 3/100
+Epoch 4/100
+Epoch 5/100
+Epoch 6/100
+Epoch 7/100
+Epoch 8/100
+Epoch 9/100
+Epoch 10/100
+Epoch 11/100
+Epoch 12/100
+Epoch 13/100
+Epoch 14/100
+Epoch 15/100
+Epoch 16/100
+Epoch 17/100
+Epoch 18/100
+Epoch 19/100
+Epoch 20/100
+Epoch 21/100
+Epoch 22/100
+Epoch 23/100
+Epoch 24/100
+Epoch 25/100
+Epoch 26/100
+Epoch 27/100
+Epoch 28/100
+Epoch 29/100
+Epoch 30/100
+Epoch 31/100
+Epoch 32/100
+Epoch 33/100
+Epoch 34/100
+Epoch 35/100
+Epoch 36/100
+Epoch 37/100
+Epoch 38/100
+Epoch 39/100
+Epoch 40/100
+Epoch 41/100
+Epoch 42/100
+Epoch 43/100
+Epoch 44/100
+Epoch 45/100
+Epoch 46/100
+Epoch 47/100
+Epoch 48/100
+Epoch 49/100
+Epoch 50/100
+Epoch 51/100
+Epoch 52/100
+Epoch 53/100
+Epoch 54/100
+Epoch 55/100
+Epoch 56/100
+Epoch 57/100
+Epoch 58/100
+Epoch 59/100
+Epoch 60/100
+Epoch 61/100
+Epoch 62/100
+Epoch 63/100
+Epoch 64/100
+Epoch 65/100
+Epoch 66/100
+Epoch 67/100
+Epoch 68/100
+Epoch 69/100
+Epoch 70/100
+Epoch 71/100
+Epoch 72/100
+Epoch 73/100
+Epoch 74/100
+Epoch 75/100
+Epoch 76/100
+Epoch 77/100
+Epoch 78/100
+Epoch 79/100
+Epoch 80/100
+Epoch 81/100
+Epoch 82/100
+Epoch 83/100
+Epoch 84/100
+Epoch 85/100
+Epoch 86/100
+Epoch 87/100
+Epoch 88/100
+Epoch 89/100
+Epoch 90/100
+Epoch 91/100
+Epoch 92/100
+Epoch 93/100
+Epoch 94/100
+Epoch 95/100
+Epoch 96/100
+Epoch 97/100
+Epoch 98/100
+Epoch 99/100
+Epoch 100/100
+--- Оценка базовой модели на тестовых данных ---
+Средняя квадратурная ошибка (MSE): 16.82
+Средняя абсолютная ошибка (MAE): $2776.82
+--- K-Fold перекрестная проверка ---
+Обработка блока #0
+  Блок #0: финальная val_mae = 1.8312
+Обработка блока #1
+  Блок #1: финальная val_mae = 2.4674
+Обработка блока #2
+  Блок #2: финальная val_mae = 2.5265
+Обработка блока #3
+  Блок #3: финальная val_mae = 2.4957
+Средняя MAE за последние 10 эпох (K-Fold): 2.3374 ($2337.35)
+Финальные val_mae по фолдам: ['1.8312', '2.4674', '2.5265', '2.4957']
+Стандартное отклонение финальных MAE по фолдам: 0.2889
+--- Обучение модели с 50 эпохами ---
+Epoch 1/50
+Epoch 2/50
+Epoch 3/50
+Epoch 4/50
+Epoch 5/50
+Epoch 6/50
+Epoch 7/50
+Epoch 8/50
+Epoch 9/50
+Epoch 10/50
+Epoch 11/50
+Epoch 12/50
+Epoch 13/50
+Epoch 14/50
+Epoch 15/50
+Epoch 16/50
+Epoch 17/50
+Epoch 18/50
+Epoch 19/50
+Epoch 20/50
+Epoch 21/50
+Epoch 22/50
+Epoch 23/50
+Epoch 24/50
+Epoch 25/50
+Epoch 26/50
+Epoch 27/50
+Epoch 28/50
+Epoch 29/50
+Epoch 30/50
+Epoch 31/50
+Epoch 32/50
+Epoch 33/50
+Epoch 34/50
+Epoch 35/50
+Epoch 36/50
+Epoch 37/50
+Epoch 38/50
+Epoch 39/50
+Epoch 40/50
+Epoch 41/50
+Epoch 42/50
+Epoch 43/50
+Epoch 44/50
+Epoch 45/50
+Epoch 46/50
+Epoch 47/50
+Epoch 48/50
+Epoch 49/50
+Epoch 50/50
+--- Оценка модели (50 эпох) на тестовых данных ---
+Средняя квадратурная ошибка (MSE): 21.00
+Средняя абсолютная ошибка (MAE): $2943.24
+--- Сравнение моделей ---
+Базовая модель (100 эпох):  MSE=16.82, MAE=2.7768 ($2776.82)
+Модель (50 эпох):           MSE=21.00, MAE=2.9432 ($2943.24)
+K-Fold CV (средняя MAE, последние 10 эпох): 2.3374
+Минимум val_loss базовой модели на эпохе 85 (val_loss=14.47); на тесте val_loss=16.82
+Минимум val_mae базовой модели на эпохе 85 (val_mae=2.4584)
